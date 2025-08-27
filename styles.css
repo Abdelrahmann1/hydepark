@@ -7,15 +7,18 @@
 }
 
 :root {
-    --primary: #1a365d;
-    --secondary: #2d3748;
-    --accent: #3182ce;
-    --gold: #d69e2e;
-    --light: #f7fafc;
-    --dark: #1a202c;
-    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
+    --primary: #31353d;      /* الأساسي: رمادي غامق */
+    --secondary: #31353d;    /* الثانوي: أبيض */
+  
+    --accent: #4a90e2;       /* لون مميز أزرق سماوي يعطي contrast */
+    --gold: #31353d;         /* ذهبي راقي يتماشى مع الغامق */
+    --light: #f5f6fa;        /* خلفيات فاتحة (قريب من الأبيض لكن أهدى) */
+    --dark: #1c1e22;         /* أغمق من الأساسي لاستخدامه في النصوص الثقيلة */
+  
+    --gradient: linear-gradient(135deg, #31353d 0%, #4a90e2 100%);
+    --shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  
 
 html {
     scroll-behavior: smooth;
@@ -68,7 +71,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(26, 54, 93, 0.95);
+    background: rgba(49, 53, 61, 0.95); /* من الـ palette */
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 2rem;
@@ -76,7 +79,7 @@ nav {
 }
 
 nav.scrolled {
-    background: rgba(26, 54, 93, 0.98);
+    background: rgba(49, 53, 61, 0.95); /* من الـ palette */
     box-shadow: var(--shadow);
 }
 
@@ -88,17 +91,19 @@ nav.scrolled {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
+.logo img {
+    height: 50px;   /* اتحكم في الارتفاع */
+    width: 80;    /* العرض يتناسب مع الارتفاع */
+    object-fit: contain; /* يضمن عدم تشويه الصورة */
     transition: transform 0.3s ease;
-}
-
+  }
 .logo:hover {
     transform: scale(1.05);
 }
+logo img {
+    height: 40px;  /* حجم اللوجو */
+    width: auto;
+  }
 
 .nav-links {
     display: flex;
@@ -114,7 +119,7 @@ nav.scrolled {
 }
 
 .nav-links a:hover {
-    color: var(--gold);
+    color: #f5f6fa;
 }
 
 .nav-links a::after {
@@ -149,8 +154,8 @@ nav.scrolled {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.7)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23667eea" width="1200" height="800"/><polygon fill="%23764ba2" points="0,800 400,600 800,700 1200,500 1200,800"/></svg>');
+    background: linear-gradient(rgba(49, 53, 61, 0.7), rgba(28, 31, 36, 0.7)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%2331353d" width="1200" height="800"/><polygon fill="%23d4af37" points="0,800 400,600 800,700 1200,500 1200,800"/></svg>');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -159,7 +164,9 @@ nav.scrolled {
     text-align: center;
     position: relative;
     overflow: hidden;
-}
+    color: #ffffff; /* النص أبيض */
+  }
+  
 
 .hero::before {
     content: '';
@@ -344,24 +351,19 @@ section {
 }
 
 .project-image {
-    width: 100%;
-    height: 250px;
-    background: var(--gradient);
-    position: relative;
+    flex: 1; /* ياخد كل المساحة المتاحة */
     overflow: hidden;
-}
-
-.project-image::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 10px;
-}
+    border-radius: 5px;
+      
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يخلي الصورة تغطي كامل المساحة بدون تشويه */
+    display: block;
+  }
+  
 
 .project-content {
     padding: 2rem;
@@ -390,12 +392,14 @@ section {
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 1.5rem;
+    padding-right: 25px;       /* مسافة من اليمين للأيقونة */
+
 }
 
 .project-features li::before {
     content: '✓';
     position: absolute;
-    left: 0;
+    right: 0;
     color: var(--accent);
     font-weight: bold;
 }
@@ -457,6 +461,12 @@ section {
     padding: 2rem;
     border-radius: 20px;
     backdrop-filter: blur(10px);
+
+}
+.contact-form label {
+    display: block;
+    text-align: right;   /* ✅ يخلي النص بتاع الـ label يبدأ من اليمين */
+    direction: rtl;      /* ✅ يضمن إن النص العربي يبقى مضبوط */
 }
 
 .form-group {
@@ -493,7 +503,7 @@ section {
 .submit-btn {
     width: 100%;
     background: var(--gold);
-    color: white;
+    color: black;
     padding: 1rem;
     border: none;
     border-radius: 10px;
@@ -501,11 +511,13 @@ section {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    background: #fff;
 }
 
 .submit-btn:hover {
-    background: #b7791f;
+    background: #313550;
     transform: translateY(-2px);
+    color: wheat;
 }
 
 /* Footer */
@@ -664,3 +676,39 @@ img {
         padding: 2rem 0;
     }
 }
+.floating-icons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;   /* من اليسار */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+  }
+  
+  .floating-icons a {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff; /* واتساب */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in-out;
+    text-decoration: none;
+  }
+  
+  .floating-icons a.phone {
+    background: #fff; /* تليفون */
+  }
+  
+  .floating-icons a img {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .floating-icons a:hover {
+    transform: scale(1.1);
+  }
+  
