@@ -102,6 +102,7 @@ nav.scrolled {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .logo img {
@@ -279,6 +280,7 @@ section {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    height: 10%;
 }
 
 .section-title {
@@ -741,10 +743,12 @@ img {
 .floating-icons a:hover {
     transform: scale(1.1);
 }
-.location-icon {
-    display: inline-block;
-    margin-left: 8px;
-    margin-right: 6px;
-    vertical-align: -3px; /* Centers vertically with text */
-    transition: fill 0.3s ease;
-}
+
+.contact-image {
+    width: 100%;        /* تخليها تاخد عرض كامل */
+    height: 66%;       /* يحافظ على التناسق */
+    border-radius: 15px; /* حواف دائرية */
+    object-fit: cover;   /* يملأ المساحة بدون تشويه */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* ظل جميل */
+  }
+  
