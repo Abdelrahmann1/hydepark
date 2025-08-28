@@ -3,9 +3,7 @@
 // Preloader
 window.addEventListener('load', function() {
     const preloader = document.querySelector('.preloader');
-    setTimeout(() => {
         preloader.classList.add('hidden');
-    }, 1000);
 });
 
 // Navbar scroll effect
@@ -61,3 +59,67 @@ window.addEventListener('scroll', function() {
         scrollTopBtn.classList.remove('show');
     }
 });
+
+
+async function handleSubmit(e, sheet) {
+    e.preventDefault();
+    const form = e.target; // The form element
+    const name = form.name.value.trim(); // Assuming your input has name="name"
+    const phone = form.phone.value.trim(); // Assuming your input has name="phone"
+    if (form.project) {
+        const project = form.project.value.trim(); // Assuming your input has name="phone"
+        if (project != "none") {
+            sheet = project;
+        }else{
+            console.log("none");
+            
+        }
+    }else{
+        console.log("all");
+        
+    }
+    // // Validate inputs
+    if (!name || !phone) {
+      showAlert("الرجاء إدخال الاسم ورقم الهاتف.", "warning");
+      return;
+    }
+  
+    console.log(name, phone,sheet);
+    
+    // // Show progress bar
+    // const progressContainer = document.getElementById("progressContainer");
+    // progressContainer.classList.remove("d-none");
+  
+    // Send to your PHP backend
+    // try {
+    //   const response = await fetch('./submit-sheet.php', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+    //     body: new URLSearchParams({
+    //       name: name,
+    //       phone: phone,
+    //       compound: sheet
+    //     })
+    //   });
+  
+    //   const result = await response.json();
+  
+    //   if (result.success) {
+    //     name.value = "";
+    //     phone.value = "";
+    //     showAlert("شكراً لك! تم إرسال بياناتك بنجاح.", "success");
+    //     setTimeout(() => {
+    //       window.location.href = 'thank_you.html';
+    //     }, 1000);
+    //   } else {
+    //     throw new Error(result.error || "Submission failed");
+    //   }
+    // } catch (error) {
+    //   console.error("Error:", error);
+    //   showAlert("حدث خطأ، برجاء المحاولة مرة أخرى.", "danger");
+    // } finally {
+    //   progressContainer.classList.add("d-none");
+    // }
+  }

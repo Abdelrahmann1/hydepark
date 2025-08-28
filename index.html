@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="styles.css">
 
     <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
 
@@ -86,7 +88,7 @@
             <div class="contact-content fade-in">
                 <img src="assets/imgs/hydeparkplan.jpg" loading="lazy" alt="Phone" class="contact-image">
 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event,' Hyde Park All')">
                     <p style="text-align: center;">سوف نقوم بالاتصال بك في أقرب وقت ممكن.</p>
 
                     <div class="form-group">
@@ -144,7 +146,7 @@
                         </ul>
                         <div class="project-price"> Chalet, Duplex, Penthouses, Townhouses, Villas
                         </div>
-                        <button class="project-button" onclick="showInterest('كومبوند هايد بارك')">سجّل اهتمامك</button>
+                        <button class="project-button" onclick="setSheetAndOpen('newcairo')">سجّل اهتمامك</button>
                     </div>
                 </div>
 
@@ -177,8 +179,8 @@
                         <div class="project-price"> Chalet, Duplex, Penthouses, Townhouses, Villas
                         </div>
 
+                        <button class="project-button" onclick="setSheetAndOpen('Gardens Lakes')">سجّل اهتمامك</button>
 
-                        <button class="project-button" onclick="showInterest('Garden Lakes')">سجّل اهتمامك</button>
                     </div>
                 </div>
 
@@ -212,8 +214,7 @@
                         <div class="project-price"> Chalet, Duplex, Penthouses, Townhouses, Villas
                         </div>
 
-
-                        <button class="project-button" onclick="showInterest('Seashore')">سجّل اهتمامك</button>
+                        <button class="project-button" onclick="setSheetAndOpen('Seashore')">سجّل اهتمامك</button>
                     </div>
                 </div>
 
@@ -303,7 +304,7 @@
                     </p>
                 </div>
 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event,' Hyde Park All')">
                     <div class="form-group">
                         <label for="name">الاسم الكامل *</label>
                         <input type="text" id="name" name="name" placeholder="اكتب اسمك الكامل" required>
@@ -345,6 +346,32 @@
 
 
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Form: sheet will be passed via handleSubmit('default-sheet') -->
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event, 'Hyde Park All')">
+                    <h5 class="modal-title text-center mt-3 " id="modal-title">
+                        سجّل اهتمامك بمشروع <strong><span id="displayedProject">غير معروف</span></strong>
+                    </h5>
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل *</label>
+                        <input type="text" id="name" name="name" placeholder="اكتب اسمك الكامل" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="اكتب رقم هاتفك" required>
+                    </div>
+
+                    <!-- Hidden field: use this to override sheet if needed -->
+                    <input type="hidden" name="project" value="none">
+
+                    <button type="submit" class="submit-btn">اطلب استشارة</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- Scroll to Top Button -->
     <div class="scroll-top" id="scrollTop">
         <span>↑</span>
@@ -355,7 +382,7 @@
     <script src="main.js" defer></script>
 
     <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
+    <!-- <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "RealEstateAgent",
@@ -403,7 +430,82 @@
             ]
         }
     }
+    </scrip> -->
+    <script>
+        // ===== CONFIG: Set your default sheet here =====
+        let SUBMIT_SHEET = 'Hyde Park All'; // Default sheet name
+
+        // Function to open modal with selected project
+
+        // You can change this logic:
+        // - Based on URL: ?project=merasee
+        // - Based on campaign, cookie, etc.
+
+        // Example: Change sheet based on URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlProject = urlParams.get('project');
+        if (urlProject) {
+            SUBMIT_SHEET = decodeURIComponent(urlProject); // e.g., ?project=مراسي
+        }
+
+        // ===== Show Modal Automatically =====
+        document.addEventListener("DOMContentLoaded", function () {
+            const exampleModal = document.getElementById('exampleModal');
+
+            // Update the form's onSubmit to use the dynamic sheet
+            const form = document.getElementById('contactForm');
+            form.onsubmit = function (e) {
+                handleSubmit(e, SUBMIT_SHEET);
+            };
+
+            // Show modal after 1 second
+            setTimeout(() => {
+                const modal = new bootstrap.Modal(exampleModal);
+                modal.show();
+            }, 1000);
+        });
+        function setSheetAndOpen(sheet) {
+            SUBMIT_SHEET = sheet;
+
+            const projectInput = document.querySelector('input[name="project"]');
+            // Optional: Update hidden input if you have one
+            if (projectInput) {
+                projectInput.value = sheet;
+            }
+            document.getElementById('displayedProject').textContent = projectInput.value;
+            if (projectInput.value=="Hyde Park All") {
+                console.log('ssss');
+                
+                document.getElementById('modal-title').style.display = 'none';
+            } else {
+                console.log('ss');
+
+                console.log(
+                    projectInput
+                );
+
+                document.getElementById('modal-title').style.display = 'block';
+            }
+            // Open modal
+            const exampleModal = document.getElementById('exampleModal');
+            const modal = bootstrap.Modal.getInstance(exampleModal) || new bootstrap.Modal(exampleModal);
+            modal.show();
+        }
+
     </script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            setSheetAndOpen('Hyde Park All');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>

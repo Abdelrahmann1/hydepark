@@ -751,4 +751,14 @@ img {
     object-fit: cover;   /* يملأ المساحة بدون تشويه */
     box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* ظل جميل */
   }
-  
+.modal-content .contact-form{
+        color: white;
+
+    }
+    .modal-content{
+        border-radius: 20px !important;
+            background: var(--dark) !important;
+            border: none !important;
+            color: white;
+    
+        }
