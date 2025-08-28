@@ -27,7 +27,10 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -354,9 +357,10 @@
                     <h5 class="modal-title text-center mt-3 " id="modal-title">
                         سجّل اهتمامك بمشروع <strong><span id="displayedProject">غير معروف</span></strong>
                     </h5>
+                    <h4 style="text-align: center;">سجّل اهتمامك بمشروع</h4>
                     <div class="form-group">
                         <label for="name">الاسم الكامل *</label>
-                        <input type="text" id="name" name="name" placeholder="اكتب اسمك الكامل" required>
+                        <input type="text" id="name" name="name" placeholder="اكتب اسمك " required>
                     </div>
 
                     <div class="form-group">
@@ -473,9 +477,9 @@
                 projectInput.value = sheet;
             }
             document.getElementById('displayedProject').textContent = projectInput.value;
-            if (projectInput.value=="Hyde Park All") {
+            if (projectInput.value == "Hyde Park All") {
                 console.log('ssss');
-                
+
                 document.getElementById('modal-title').style.display = 'none';
             } else {
                 console.log('ss');
