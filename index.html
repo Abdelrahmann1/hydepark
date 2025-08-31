@@ -2,44 +2,69 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <!-- Charset & Mobile Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title & Meta Description (SEO) -->
     <title>Hyde Park Developments</title>
     <meta name="description"
-        content="بريميوم بروبرتيز - خبرة 20+ سنة في تطوير وتسليم الوحدات السكنية الفاخرة. نوفر مساحات متنوعة، أنظمة سداد مرنة حتى 6 سنوات، ومشاريع في أفضل المواقع لراحة واستثمار مضمون.">
+          content="بريميوم بروبرتيز - خبرة 20+ سنة في تطوير وتسليم الوحدات السكنية الفاخرة. نوفر مساحات متنوعة، أنظمة سداد مرنة حتى 6 سنوات، ومشاريع في أفضل المواقع لراحة واستثمار مضمون.">
     <meta name="keywords"
-        content="عقارات فاخرة, شقق للبيع, استثمار عقاري, مشروعات سكنية, أقساط 6 سنوات, بريميوم بروبرتيز, وحدات سكنية, تسليم فوري, أفضل مواقع سكنية, رضا العملاء">
+          content="عقارات فاخرة, شقق للبيع, استثمار عقاري, مشروعات سكنية, أقساط 6 سنوات, بريميوم بروبرتيز, وحدات سكنية, تسليم فوري, أفضل مواقع سكنية, رضا العملاء">
     <meta name="robots" content="index, follow">
-    <!-- Open Graph for Hyde Park -->
+  
+    <!-- Open Graph (Social Sharing) -->
     <meta property="og:title" content="هايد بارك | حياة متكاملة في قلب التجمع الخامس">
     <meta property="og:description"
-        content="استمتع بمساحات خضراء شاسعة وخدمات متكاملة داخل هايد بارك. خطط سداد مرنة حتى 8 سنوات، وموقع استراتيجي في التجمع الخامس.">
+          content="استمتع بمساحات خضراء شاسعة وخدمات متكاملة داخل هايد بارك. خطط سداد مرنة حتى 8 سنوات، وموقع استراتيجي في التجمع الخامس.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://yourwebsite.com/images/hyde-park-og.jpg">
     <meta property="og:url" content="https://yourwebsite.com/hyde-park">
     <meta property="og:locale" content="ar_AR">
-
-<!-- Preload critical resources -->
-<link rel="preload" href="styles.css" as="style">
-<link rel="preload" href="main.js" as="script">
-
-<!-- External CSS (your own stylesheet) -->
-<link rel="stylesheet" href="styles.css">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/imgs/favicon.png">
-
-<!-- Bootstrap CSS (load asynchronously) -->
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" as="style" 
-      onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-</noscript>
-
-</head>
+  
+    <!-- Preconnect for Faster CDN Requests -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="main.js" as="script">
+  
+    <!-- Your Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+  
+    <!-- Bootstrap CSS (async load) -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" as="style" 
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    </noscript>
+  
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
+  
+    <!-- SEO Performance Hints -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#ffffff">
+  
+    <!-- Structured Data (optional: JSON-LD for SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Hyde Park Developments",
+      "description": "بريميوم بروبرتيز - خبرة 20+ سنة في تطوير وتسليم الوحدات السكنية الفاخرة.",
+      "url": "https://yourwebsite.com/hyde-park",
+      "logo": "https://yourwebsite.com/assets/imgs/favicon.png",
+      "areaServed": "القاهرة الجديدة, التجمع الخامس, مصر"
+    }
+    </script>
+  </head>
+  
 
 <body>
-    
+
     <!-- Preloader -->
     <div class="preloader">
         <div class="loader"></div>
