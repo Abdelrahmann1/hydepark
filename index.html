@@ -30,7 +30,13 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
 
-    <!-- Bootstrap CSS -->
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- ملف الاستايل الخارجي -->
+    <link rel="stylesheet" href="style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -85,6 +91,55 @@
             <a href="#projects" class="cta-button">استكشف المشاريع</a>
         </div>
     </section>
+
+
+
+    <!-- Pricing Highlights -->
+
+    <section id="features" class="features section light-background">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row gy-4 text-center">
+
+                <!-- ميزة: شقق وفيلات استلام فوري -->
+                <div class="col-xl-3 col-md-6 col-12 feature-item">
+                    <i class="bi bi-house-check feature-icon"></i>
+                    <h5>شقق وفيلات</h5>
+                    <p>استلام فوري</p>
+                </div>
+
+                <!-- ميزة: المساحات -->
+                <div class="col-xl-3 col-md-6 col-12 feature-item">
+                    <i class="bi bi-bounding-box feature-icon"></i>
+                    <h5>مساحات متنوعة</h5>
+                    <p>تبدأ من 90 م²</p>
+                </div>
+
+                <!-- ميزة: أقساط -->
+                <div class="col-xl-3 col-md-6 col-12 feature-item">
+                    <i class="bi bi-calendar-check feature-icon"></i>
+                    <h5>أنظمة سداد</h5>
+                    <p>أقساط حتى 7 سنوات</p>
+                </div>
+
+                <!-- ميزة: مقدمات -->
+                <div class="col-xl-3 col-md-6 col-12 feature-item">
+                    <i class="bi bi-cash-stack feature-icon"></i>
+                    <h5>مقدم بسيط</h5>
+                    <p>بمقدم يبدأ من 5%</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!--     
+                            
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title fade-in">تواصل معنا</h2>
@@ -109,7 +164,10 @@
                 </form>
             </div>
         </div>
-    </section>
+    </section> -->
+    <!-- End Pricing Highlights -->
+
+
 
 
 
@@ -119,7 +177,7 @@
             <h2 class="section-title fade-in">اكتشف مشاريعنا المتميزة</h2>
 
             <div class="projects-grid fade-in">
-                
+
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-image">
@@ -131,6 +189,8 @@
                             - القاهرة الجديدة</h3>
 
                         <p class="project-description">
+                            <i class="bi bi-geo-alt-fill location-icon"></i>
+
                             يقع في موقع استراتيجي داخل شارع التسعين الرئيسي بمنطقة التجمع الخامس في القاهرة الجديدة،
                             ليمنحك حياة عصرية متكاملة تجمع بين الراحة، الخصوصية، والخدمات المتنوعة.
                         </p>
@@ -148,10 +208,24 @@
                             <li>نادي صحي ضخم</li>
 
 
+
                         </ul>
                         <div class="project-price"> Chalet, Duplex, Penthouses, Townhouses, Villas
                         </div>
-                        <button class="project-button" onclick="setSheetAndOpen('newcairo')">سجّل اهتمامك</button>
+                        <div class="project-actions d-flex align-items-center gap-2">
+                            <button class="project-button" onclick="setSheetAndOpen('newcairo')">سجّل اهتمامك</button>
+                          
+                            <!-- زر واتساب -->
+                            <a href="https://wa.me/201050564000" target="_blank" class="action-btn whatsapp-btn">
+                              <i class="bi bi-whatsapp"></i>
+                            </a>
+                          
+                            <!-- زر اتصال -->
+                            <a href="tel:+201050564000" class="action-btn call-btn">
+                              <i class="bi bi-telephone-fill"></i>
+                            </a>
+                          </div>
+                          
                     </div>
                 </div>
 
@@ -164,10 +238,12 @@
                     <div class="project-content">
                         <h3 class="project-title">Garden Lakes - مدينة هايد بارك 6 أكتوبر</h3>
                         <p class="project-description">
+                            <i class="bi bi-geo-alt-fill location-icon"></i>
+
                             في قلب مدينة أكتوبر التي تتسم بالحيوية والنشاط ويتوفر بها كافة الخدمات المختلفة.
                             يقع المشروع بالقرب من أشهر المولات مثل مول مصر، مول العرب، ومول أركان.
                             كما يجاور جاليريا 40، بارك ستريت، وأندريا الشيخ زايد.
-                            يبعد دقائق قليلة عن المتحف المصري الكبير والأهرامات،
+                            يبعد دقائق قليلة عن المتحف المصري ،
                         </p>
 
                         <ul class="project-features">
@@ -183,9 +259,19 @@
                         </ul>
                         <div class="project-price"> Chalet, Duplex, Penthouses, Townhouses, Villas
                         </div>
-
-                        <button class="project-button" onclick="setSheetAndOpen('Gardens Lakes')">سجّل اهتمامك</button>
-
+                        <div class="project-actions d-flex align-items-center gap-2">
+                            <button class="project-button" onclick="setSheetAndOpen('Gardens Lakes')">سجّل اهتمامك</button>
+                          
+                            <!-- زر واتساب -->
+                            <a href="https://wa.me/201050564000" target="_blank" class="action-btn whatsapp-btn">
+                              <i class="bi bi-whatsapp"></i>
+                            </a>
+                          
+                            <!-- زر اتصال -->
+                            <a href="tel:+201050564000" class="action-btn call-btn">
+                              <i class="bi bi-telephone-fill"></i>
+                            </a>
+                          </div>
                     </div>
                 </div>
 
@@ -198,6 +284,8 @@
                     <div class="project-content">
                         <h3 class="project-title">Seashore - هايد بارك الساحل الشمالي</h3>
                         <p class="project-description">
+                            <i class="bi bi-geo-alt-fill location-icon"></i>
+
                             يقع في منطقة رأس الحكمة على أجمل سواحل البحر الأبيض المتوسط الذي يتميز بمياهه الفيروزية
                             ورماله البيضاء الناعمة وسمائه الزرقاء الصافية.
                             يقترب المشروع من أهم الطرق والمحاور الرئيسية مثل طريق الإسكندرية – مرسى مطروح الصحراوي
@@ -213,13 +301,27 @@
                             <li>شاطئ مبهر بطول 550 متر</li>
                             <li>مناظر طبيعية خلابة</li>
                             <li>أفضل مناطق للتسوق</li>
-                            <li>كلوب هاوس راقي</li>
+                            <!-- <li>كلوب هاوس راقي</li> -->
                             <li>أماكن مخصصة لحفلات الشواء</li>
                         </ul>
                         <div class="project-price"> Chalet, Duplex, Penthouses, Townhouses, Villas
                         </div>
 
-                        <button class="project-button" onclick="setSheetAndOpen('Seashore')">سجّل اهتمامك</button>
+
+                        <div class="project-actions d-flex align-items-center gap-2">
+                            <button class="project-button" onclick="setSheetAndOpen('Seashore')">سجّل اهتمامك</button>
+                          
+                            <!-- زر واتساب -->
+                            <a href="https://wa.me/201050564000" target="_blank" class="action-btn whatsapp-btn">
+                              <i class="bi bi-whatsapp"></i>
+                            </a>
+                          
+                            <!-- زر اتصال -->
+                            <a href="tel:+201050564000" class="action-btn call-btn">
+                              <i class="bi bi-telephone-fill"></i>
+                            </a>
+                          </div>
+
                     </div>
                 </div>
 
@@ -232,10 +334,10 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title fade-in"> قصتنا و نظام الدفع</h2>
+            <h2 class="section-title fade-in">من نحن</h2>
             <div class="about-content fade-in">
                 <div class="about-text">
-                    <h2 class="section-title fade-in"> عننا</h2>
+                    <!-- <h2 class="section-title fade-in"> عننا</h2> -->
 
                     <p>
                         تبدأ قصة هايد بارك للتطوير العقاري برؤية تهدف إلى إنشاء مساحات سكنية استثنائية
@@ -283,7 +385,8 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title fade-in">تواصل معنا</h2>
+            <h2 class="section-title fade-in">للاستفسار والتواصل مع قسم المبيعات
+            </h2>
 
             <div class="contact-content fade-in">
                 <div class="">
@@ -330,7 +433,7 @@
     <!-- Floating Contact Icons -->
     <div class="floating-icons">
         <!-- ✅ أيقونة واتساب -->
-        <a href="https://wa.me/201234567890?text=مرحبا،%20اريد%20الاستفسار%20عن%20مشروعكم." target="_blank"
+        <a href="https://wa.me/201050564000?text=مرحبا،%20اريد%20الاستفسار%20عن%20مشروعكم." target="_blank"
             class="whatsapp" aria-label="WhatsApp">
             <img src="assets/imgs/whatsapp.png" loading="lazy" alt="WhatsApp">
         </a>
@@ -352,44 +455,46 @@
 
 
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-modal="true"
+        aria-labelledby="modal-title" aria-describedby="modal-desc">
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <!-- Form: sheet will be passed via handleSubmit('default-sheet') -->
-            <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event, 'Hyde Park All')">
-      
-              <!-- Dialog Title (Accessible Name) -->
-              <h5 class="modal-title text-center mt-3" id="modal-title">
-                سجّل اهتمامك بمشروع <strong><span id="displayedProject">غير معروف</span></strong>
-              </h5>
-      
-              <!-- Dialog Description -->
-              <h4 style="text-align: center;" id="modal-desc">
-                سوف نقوم بالاتصال بك في أقرب وقت ممكن
-              </h4>
-      
-              <!-- Input: Full Name -->
-              <div class="form-group">
-                <label for="name">الاسم الكامل <span aria-hidden="true">*</span></label>
-                <input type="text" id="name" name="name" placeholder="اكتب اسمك" required aria-required="true">
-              </div>
-      
-              <!-- Input: Phone Number -->
-              <div class="form-group">
-                <label for="phone">رقم الهاتف <span aria-hidden="true">*</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="اكتب رقم هاتفك" required aria-required="true">
-              </div>
-      
-              <!-- Hidden field -->
-              <input type="hidden" name="project" value="none">
-      
-              <!-- Submit Button -->
-              <button type="submit" class="submit-btn">اطلب استشارة</button>
-            </form>
-          </div>
+            <div class="modal-content">
+                <!-- Form: sheet will be passed via handleSubmit('default-sheet') -->
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event, 'Hyde Park All')">
+
+                    <!-- Dialog Title (Accessible Name) -->
+                    <h5 class="modal-title text-center mt-3" id="modal-title">
+                        سجّل اهتمامك بمشروع <strong><span id="displayedProject">غير معروف</span></strong>
+                    </h5>
+
+                    <!-- Dialog Description -->
+                    <h4 style="text-align: center;" id="modal-desc">
+                        سوف نقوم بالاتصال بك في أقرب وقت ممكن
+                    </h4>
+
+                    <!-- Input: Full Name -->
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل <span aria-hidden="true">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="اكتب اسمك" required aria-required="true">
+                    </div>
+
+                    <!-- Input: Phone Number -->
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف <span aria-hidden="true">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="اكتب رقم هاتفك" required
+                            aria-required="true">
+                    </div>
+
+                    <!-- Hidden field -->
+                    <input type="hidden" name="project" value="none">
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">اطلب استشارة</button>
+                </form>
+            </div>
         </div>
-      </div>
-      
+    </div>
+
     <!-- Scroll to Top Button -->
     <div class="scroll-top" id="scrollTop">
         <span>↑</span>
@@ -398,57 +503,8 @@
 
     <!-- External JavaScript -->
     <script src="main.js" defer></script>
+    
 
-    <!-- Structured Data for SEO -->
-    <!-- <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
-        "name": "Premium Properties",
-        "description": "Luxury real estate development company specializing in premium residential projects",
-        "url": "https://premiumproperties.com",
-        "telephone": "+1-555-PREMIUM",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "123 Luxury Avenue",
-            "addressLocality": "Metro City",
-            "addressRegion": "State",
-            "postalCode": "12345",
-            "addressCountry": "US"
-        },
-        "areaServed": "Metro City",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Premium Property Listings",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Residence",
-                        "name": "Azure Heights",
-                        "description": "42-story luxury tower with panoramic city views"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Residence",
-                        "name": "Emerald Gardens",
-                        "description": "Luxury villas with private gardens and pools"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Residence",
-                        "name": "Platinum Residences",
-                        "description": "Ultra-modern penthouses with exclusive amenities"
-                    }
-                }
-            ]
-        }
-    }
-    </scrip> -->
     <script>
         // ===== CONFIG: Set your default sheet here =====
         let SUBMIT_SHEET = 'Hyde Park All'; // Default sheet name

@@ -316,9 +316,10 @@ section {
 }
 
 .about-text {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     line-height: 1.8;
     color: var(--secondary);
+    font-weight: 500;
 }
 
 .about-stats {
@@ -438,6 +439,7 @@ section {
     font-weight: bold;
     color: var(--gold);
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .project-button {
@@ -763,3 +765,99 @@ img {
     
         }
         
+
+/* Pricing Section */
+.pricing {
+    padding: 40px 0;
+  }
+  
+  /* أيقونات المميزات */
+  .feature-item .feature-icon {
+    font-size: 900px;
+    color: #ce2934;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* العناوين */
+  .feature-item h5 {
+    margin-top: 10px;
+    font-weight: 700;
+    color: #543A14;
+  }
+  
+  /* النصوص */
+  .feature-item p {
+    font-size: 14px;
+    color: #555;
+  }
+  .project-button {
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .project-button:hover {
+    opacity: 0.85;
+  }
+  
+  /* واتساب */
+ 
+  /* قسم المميزات */
+#features {
+    padding: 20px 0;
+  }
+  
+  .feature-item .feature-icon {
+    font-size: 40px;
+    color: #31353d;
+  }
+  
+  .feature-item h5 {
+    margin-top: 10px;
+    font-weight: 700;
+    color: #543A14;
+  }
+  
+  .feature-item p {
+    font-size: 14px;
+    color: #555;
+  }
+  .project-actions {
+    margin-top: 15px;
+  }
+  
+  .action-btn {
+    width: 65px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .whatsapp-btn {
+    background-color: #25D366;
+  }
+  
+  .call-btn {
+    background-color: #ce2934;
+  }
+  
+  .action-btn:hover {
+    opacity: 0.85;
+  }
+  
+
+
