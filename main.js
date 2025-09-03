@@ -136,8 +136,8 @@ async function handleSubmit(e, sheet) {
     console.log(name, phone,sheet);
     
     // // Show progress bar
-    const progressContainer = document.getElementById("progressContainer");
-    progressContainer.classList.remove("d-none");
+    const preloader = document.querySelector('.preloader');
+    preloader.classList.remove('hidden');
   
     // Send to your PHP backend
     try {
@@ -158,17 +158,61 @@ async function handleSubmit(e, sheet) {
       if (result.success) {
         name.value = "";
         phone.value = "";
+        
+        window.location.href = 'thank_you.html';
         showAlert("شكراً لك! تم إرسال بياناتك بنجاح.", "success");
-        setTimeout(() => {
-          window.location.href = 'thank_you.html';
-        }, 1000);
+      preloader.classList.add('hidden');
+        
+
       } else {
         throw new Error(result.error || "Submission failed");
       }
     } catch (error) {
       console.error("Error:", error);
+      preloader.classList.add('hidden');
+
       showAlert("حدث خطأ، برجاء المحاولة مرة أخرى.", "danger");
     } finally {
-      progressContainer.classList.add("d-none");
+      preloader.classList.add('hidden');
     }
+  }
+  function showAlert(message, type) {
+    const alertContainer = document.getElementById("alertContainer");
+  
+    // Clear any existing alerts
+    while (alertContainer.firstChild) {
+      alertContainer.firstChild.remove();
+    }
+  
+    if (!message || !type) return;
+  
+    const alertDiv = document.createElement("div");
+    alertDiv.className = `alert alert-${type} alert-dismissible fade`;
+    alertDiv.role = "alert";
+    alertDiv.innerHTML = `
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      ${message}
+    `;
+  
+    alertContainer.appendChild(alertDiv);
+  
+    // Trigger reflow to enable transition
+    void alertDiv.offsetWidth;
+  
+    // Trigger fade-in
+    alertDiv.classList.add("show");
+  
+    // Auto-close after 10 seconds
+    const AUTO_CLOSE_DELAY = 10000;
+    // This runs AFTER the fade-out animation completes
+    if (type === "success") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setTimeout(() => {
+      const bsAlert = bootstrap.Alert.getOrCreateInstance(alertDiv);
+      bsAlert.close(); // Starts fade-out
+    }, AUTO_CLOSE_DELAY);
+  
+    // ✅ Listen for when Bootstrap finishes removing the alert
+  
   }
