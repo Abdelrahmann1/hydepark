@@ -18,14 +18,13 @@
     <meta property="og:image" content="https://yourwebsite.com/images/hyde-park-og.jpg">
     <meta property="og:url" content="https://yourwebsite.com/hyde-park">
     <meta property="og:locale" content="ar_AR">
-
-
     <!-- Preload critical resources -->
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="main.js" as="script">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
+
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
@@ -43,6 +42,7 @@
 </head>
 
 <body>
+  
 
     <!-- Preloader -->
     <div class="preloader" id="progressContainer">
@@ -74,7 +74,7 @@
     <!-- قسم البطل (Hero Section) -->
     <section id="home" class="hero">
         <!-- Lazy-loaded background image -->
-        <img src="assets/imgs/hero.webp" alt="هايد بارك للتطوير العقاري" class="hero-bg-img" loading="lazy" />
+        <img src="assets/imgs/hero3.png" alt="هايد بارك للتطوير العقاري" class="hero-bg-img" loading="lazy" />
 
         <!-- Overlay for better text readability (optional) -->
         <div class="hero-overlay"></div>
@@ -82,7 +82,18 @@
         <!-- Content centered -->
         <div class="hero-content">
             <h1>هايد بارك للتطوير العقاري</h1>
-            <p>
+            <p style="
+      display:inline-block;
+      background: rgba(49, 53, 61, 0.95);
+      padding:14px 24px;
+      border-radius:12px;
+      line-height:1.7;
+      font-size:18px;
+      font-weight:500;
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+      color:#fff;
+      text-align:center;
+    ">
                 هايد بارك للتطوير العقاري تخلق أساليب حياة نابضة بالحياة
                 ومجتمعات مليئة بالضيافة تجمع الناس معًا.
                 اكتشف المشاريع السكنية المميزة في أفضل المواقع،
@@ -91,8 +102,6 @@
             <a href="#projects" class="cta-button">استكشف المشاريع</a>
         </div>
     </section>
-
-
 
     <!-- Pricing Highlights -->
 
@@ -164,9 +173,84 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title fade-in">اكتشف مشاريعنا المتميزة</h2>
+            <h2 class="section-title fade-in">اكتشف مشاريعنا المتميزة / Discover Our Signature Projects</h2>
+          
+            <div class="project-card featured">
+             
+          
+              <div class="project-content">
+                <h3 class="project-title">Signature in Hyde Park West<br><span style="font-weight: 500; font-size: 1.2rem; color: #555;">هايد بارك ويست – القاهرة</span></h3>
+          
+               
+                
+          
+               
+                <div class="project-image">
+                    <img src="assets/imgs/hero3.png" alt="Signature in Hyde Park West" loading="lazy">
+                  </div>
+                  <br>
+                  
+          
+                <div class="project-proximity">
+                    
+                    <div class="project-location">
+                        <p class="project-description">
+                            - مشروع سكني فاخر يمتد على مساحة 57 فدانًا في قلب هايد بارك، يقدم نمط حياة راقٍ وسط أرقى المرافق والخدمات.<br>
+                          </p>
+                        📍 <strong>الموقع :</strong> بجوار نادي الجزيرة الرياضي، هايد بارك، القاهرة<br>
+                      </div>
+                    
+                    <h3 class="">                  <strong>قريب من :</strong>
+                        <br><span style="font-weight: 500; font-size: 1.2rem; color: #555;"></span></h3>
+                  <ul>
+                    <li>مول مصر و مول العرب</li>
+                    <li>أركان بلازا، جاليريا 40، و سي بي بي</li>
+                    <li>المتحف المصري الكبير وأهرامات الجيزة</li>
+                  </ul>
+                </div>
+          
+                <h4 class="sub-title">الوحدات المتاحة – المرحلة الأولى / Available Units – Phase 1</h4>
+          
+                <div class="unit-types fade-in">
+                  <div class="unit">
+                    <span class="unit-icon">🏡</span>
+                    <strong>كواد / Quad</strong>
+                    <span>187 م² | 187 sqm</span>
+                    <span>متوسط السعر: 21 مليون جنيه<br>Avg. Price: EGP 21M</span>
+                  </div>
+                  <div class="unit">
+                    <strong>تاون هاوس / Townhouse</strong>
+                    <span>195 م² | 195 sqm</span>
+                    <span>متوسط السعر: 21.9 – 25.5 مليون جنيه<br>Avg. Price: EGP 21.9M – 25.5M</span>
+                  </div>
+                  <div class="unit">
+                    <strong>توين هاوس / Twin House</strong>
+                    <span>215 م² | 215 sqm</span>
+                    <span>متوسط السعر: 27.6 مليون جنيه<br>Avg. Price: EGP 27.6M</span>
+                  </div>
+                  <div class="unit">
+                    <strong>ستاند ألون / Standalone</strong>
+                    <span>240 – 268 م² | 240 – 268 sqm</span>
+                    <span>متوسط السعر: 38.5 – 41.5 مليون جنيه<br>Avg. Price: EGP 38.5M – 41.5M</span>
+                  </div>
+                </div>
+          
+                <div class="project-payment fade-in ">
+                  💳 <strong>خطة السداد / Payment Plan:</strong> 5% مقدم على 10 سنوات<br>
+                  📝 <strong>رسوم التعبير عن الاهتمام / EOI:</strong> 100,000 جنيه
+                </div>
+          
+                <button class="project-button" onclick="setSheetAndOpen('hydepark signature in House')">
+                  سجّل اهتمامك 
+                </button>
+              </div>
+            </div>
+          </div>
+
+
 
             <div class="projects-grid fade-in">
+                
 
                 <!-- Project 1 -->
                 <div class="project-card">
@@ -200,12 +284,15 @@
                         <div class="project-price"> Chalet, Duplex, Penthouses, Townhouses, Villas
                         </div>
                         <div class="project-actions d-flex align-items-center gap-2">
-                            <button class="project-button" onclick="setSheetAndOpen('Hyde Park New Cairo')">سجّل اهتمامك</button>
+                            <button class="project-button"
+                                onclick="setSheetAndOpen('Hyde Park New Cairo In House')">سجّل اهتمامك</button>
 
                             <!-- زر واتساب -->
-                            <a href="https://wa.me/201050564000" target="_blank" class="action-btn whatsapp-btn">
+                            <a href="https://wa.me/201050564000?text=Hello%2C%20I%20would%20like%20to%20know%20more%20details%20about%20Hyde%20Park%20New%20Cairo%20projects."
+                                target="_blank" class="action-btn whatsapp-btn">
                                 <i class="bi bi-whatsapp"></i>
                             </a>
+
 
                             <!-- زر اتصال -->
                             <a href="tel:+201050564000" class="action-btn call-btn">
@@ -247,13 +334,16 @@
                         <div class="project-price"> Chalet, Duplex, Penthouses, Townhouses, Villas
                         </div>
                         <div class="project-actions d-flex align-items-center gap-2">
-                            <button class="project-button" onclick="setSheetAndOpen('Hyde Park Garden Lakes')">سجّل
+                            <button class="project-button"
+                                onclick="setSheetAndOpen('Hyde Park Garden Lakes In House')">سجّل
                                 اهتمامك</button>
 
                             <!-- زر واتساب -->
-                            <a href="https://wa.me/201050564000" target="_blank" class="action-btn whatsapp-btn">
+                            <a href="https://wa.me/201050564000?text=Hello%2C%20I%20would%20like%20to%20know%20more%20details%20about%20Garden%20Lakes%20projects."
+                                target="_blank" class="action-btn whatsapp-btn">
                                 <i class="bi bi-whatsapp"></i>
                             </a>
+
 
                             <!-- زر اتصال -->
                             <a href="tel:+201050564000" class="action-btn call-btn">
@@ -297,12 +387,15 @@
 
 
                         <div class="project-actions d-flex align-items-center gap-2">
-                            <button class="project-button" onclick="setSheetAndOpen('Hyde Park Seashore')">سجّل اهتمامك</button>
+                            <button class="project-button" onclick="setSheetAndOpen('Hyde Park Seashore In House')">سجّل
+                                اهتمامك</button>
 
                             <!-- زر واتساب -->
-                            <a href="https://wa.me/201050564000" target="_blank" class="action-btn whatsapp-btn">
+                            <a href="https://wa.me/201050564000?text=Hello%2C%20I%20would%20like%20to%20know%20more%20details%20about%20Seashore%20projects."
+                                target="_blank" class="action-btn whatsapp-btn">
                                 <i class="bi bi-whatsapp"></i>
                             </a>
+
 
                             <!-- زر اتصال -->
                             <a href="tel:+201050564000" class="action-btn call-btn">
@@ -399,7 +492,9 @@
                     </p>
                 </div>
 
-                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event,'Hyde Park All')">
+
+                
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event,'Hyde Park All In House')">
 
                     <div class="form-group">
 
@@ -421,10 +516,11 @@
     <!-- Floating Contact Icons -->
     <div class="floating-icons">
         <!-- ✅ أيقونة واتساب -->
-        <a href="https://wa.me/201050564000?text=مرحبا،%20اريد%20الاستفسار%20عن%20مشروعكم." target="_blank"
-            class="whatsapp" aria-label="WhatsApp">
+        <a href="https://wa.me/201050564000?text=Hello%2C%20I%20would%20like%20to%20know%20more%20details%20about%20Hyde%20Park%20projects."
+            target="_blank" class="whatsapp" aria-label="WhatsApp">
             <img src="assets/imgs/whatsapp.png" loading="lazy" alt="WhatsApp">
         </a>
+
 
         <!-- ✅ أيقونة تليفون -->
         <a href="tel:+201050564000" class="phone" aria-label="Phone">
@@ -448,7 +544,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <!-- Form: sheet will be passed via handleSubmit('default-sheet') -->
-                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event, 'Hyde Park All')">
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event, 'Hyde Park All In House')">
 
                     <!-- Dialog Title (Accessible Name) -->
                     <h5 class="modal-title text-center mt-3" id="modal-title">
@@ -493,13 +589,13 @@
     <script src="main.js" defer></script>
 
 
-  
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-        crossorigin="anonymous"></script>
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous">
+        </script>
 
 </body>
 

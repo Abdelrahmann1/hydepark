@@ -29,7 +29,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-let SUBMIT_SHEET = 'Hyde Park All'; // Default sheet name
+function getUrlParams() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    utm_source: params.get("utm_source") || "",
+    utm_medium: params.get("utm_medium") || "",
+    utm_campaign: params.get("utm_campaign") || "",
+    utm_content: params.get("utm_content") || "",
+    utm_term: params.get("utm_term") || "",
+    device: params.get("device") || "",
+    gclid: params.get("gclid") || ""
+  };
+}
+let SUBMIT_SHEET = 'Hyde Park All In House'; // Default sheet name
 
 const urlParams = new URLSearchParams(window.location.search);
 const urlProject = urlParams.get('project');
@@ -58,7 +70,7 @@ function setSheetAndOpen(sheet) {
         projectInput.value = sheet;
     }
     document.getElementById('displayedProject').textContent = projectInput.value;
-    if (projectInput.value == "Hyde Park All") {
+    if (projectInput.value == "Hyde Park All In House") {
         console.log('ssss');
 
         document.getElementById('modal-title').style.display = 'none';
@@ -77,7 +89,9 @@ function setSheetAndOpen(sheet) {
     modal.show();
 }
 document.addEventListener("DOMContentLoaded", function () {
-    setSheetAndOpen('Hyde Park All');
+     setTimeout(function() {
+    setSheetAndOpen('Hyde Park All In House');
+    }, 5000); // 5000ms = 5 seconds
 });
 // Intersection Observer for animations
 const observerOptions = {
@@ -133,8 +147,8 @@ async function handleSubmit(e, sheet) {
       return;
     }
   
-    console.log(name, phone,sheet);
-    
+    const utmData = getUrlParams();
+
     // // Show progress bar
     const preloader = document.querySelector('.preloader');
     preloader.classList.remove('hidden');
@@ -149,7 +163,8 @@ async function handleSubmit(e, sheet) {
         body: new URLSearchParams({
           name: name,
           phone: phone,
-          compound: sheet
+          compound: sheet,
+          ...utmData
         })
       });
   
