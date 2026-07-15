@@ -88,11 +88,11 @@ function setSheetAndOpen(sheet) {
     const modal = bootstrap.Modal.getInstance(exampleModal) || new bootstrap.Modal(exampleModal);
     modal.show();
 }
-document.addEventListener("DOMContentLoaded", function () {
-     setTimeout(function() {
-    setSheetAndOpen('Hyde Park All In House');
-    }, 5000); // 5000ms = 5 seconds
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//      setTimeout(function() {
+//     setSheetAndOpen('Hyde Park All In House');
+//     }, 5000); // 5000ms = 5 seconds
+// });
 // Intersection Observer for animations
 const observerOptions = {
     threshold: 0.1,

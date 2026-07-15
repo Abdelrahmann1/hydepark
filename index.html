@@ -171,6 +171,65 @@
     </section> -->
     <!-- End Pricing Highlights -->
     <!-- Projects Section -->
+
+    <div style="width:100%; display:flex; justify-content:center; margin:30px 0; ">
+        <div style="width:100%; max-width:800px  ; ">
+      
+          <!-- Form Title -->
+          <h3 style="font-size:1.5rem; font-weight:700; color:#1a3a32; margin-bottom:24px; text-align:center; letter-spacing:-0.5px;">
+            سجّل لطلب استشارة  
+           
+          </h3>
+      
+          <!-- Form -->
+          <form onsubmit="handleSubmit(event, 'Hyde Park All In House')" 
+                style="width:100%; background:#fff; padding:28px; border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,0.06); box-sizing:border-box;">
+            
+            <div style="margin-bottom:20px;">
+              <label for="name" style="display:block; font-size:1.05rem; font-weight:600; color:#2d3748; margin-bottom:10px;">
+                الاسم الكامل *
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="اكتب اسمك الكامل"
+                required
+                style="width:100%; padding:13px 16px; border:1px solid #e2e8f0; border-radius:12px; font-size:1rem; background:#fafafa; transition:border-color 0.3s; box-sizing:border-box; direction:rtl; text-align:right;"
+                onfocus="this.style.borderColor='#c9a86b'; this.style.background='#fff';"
+                onblur="this.style.borderColor='#e2e8f0'; this.style.background='#fafafa';"
+              >
+            </div>
+      
+            <div style="margin-bottom:24px;">
+              <label for="phone" style="display:block; font-size:1.05rem; font-weight:600; color:#2d3748; margin-bottom:10px;">
+                رقم الهاتف *
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="اكتب رقم هاتفك"
+                required
+                style="width:100%; padding:13px 16px; border:1px solid #e2e8f0; border-radius:12px; font-size:1rem; background:#fafafa; transition:border-color 0.3s; box-sizing:border-box; direction:rtl; text-align:right;"
+                onfocus="this.style.borderColor='#c9a86b'; this.style.background='#fff';"
+                onblur="this.style.borderColor='#e2e8f0'; this.style.background='#fafafa';"
+              >
+            </div>
+      
+            <button
+              type="submit";
+              class="project-button";
+              
+              onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 4px 12px rgba(201, 168, 107, 0.4)';"
+              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"
+            >
+            سجّل اهتمامك
+            </button>
+          </form>
+        </div>
+      </div>
+      <br>
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title fade-in">اكتشف مشاريعنا المتميزة / Discover Our Signature Projects</h2>
@@ -410,8 +469,6 @@
         </div>
     </section>
 
-
-
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -507,7 +564,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="اكتب رقم هاتفك" required>
                     </div>
 
-                    <button type="submit" class="submit-btn">اطلب استشارة</button>
+                    <button type="submit" class="submit-btn">سجّل اهتمامك</button>
                 </form>
             </div>
         </div>
